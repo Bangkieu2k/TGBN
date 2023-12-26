@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+.img2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    margin-top: 0px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.containerimg2 {
+    width: 100%;
+    text-align: center;
+}
+.containerimg2 h1{
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.hero-content {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+}
+.hero-content img{
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    margin-top: 20px;
+}
+.menu{
+    display: flex;
+    margin-left: 25%;
+}
+.ab-gallery{
+    margin-top: 30px;
+    margin-bottom: 100px;
+	overflow: hidden;
+    
+}
+.ab-gallery a{
+	display: block;
+	float: left;
+	width: 20%;
+	-webkit-transition: .3s all;
+	-o-transition: .3s all;
+	transition: .3s all;
+    text-decoration: none;
+}
+.ab-gallery a span{
+    color: #000;
+    margin-left: 0;
+}
+.ab-gallery a img{
+    max-width: 80%; 
+    max-height: 80%;
+    
+}
+.section-content{
+    color: #000;
+    font-size: 15px;
+    max-width: 970px;
+    margin: 0 auto 60px;
+    overflow: hidden;
+}
+.section-content p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.home-test-content{
+    color: #000;
+    font-size: 15px;
+    background: url(images/qupte.png) no-repeat top left;
+    padding: 14px 28px;
+    max-width: 800px;
+    margin: 0 auto 11px;
+    margin-top: 80px;
+}
+.home-test-name{
+    color: #b7752b;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.home-test-image{
+    margin: auto;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Đăng Ký</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="to">
+        <div class="form">
+        </div>
+        <div class="container">
+          <h2 class="mt-4">Đăng Ký</h2>
+          <form id="registrationForm">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+    
+            <div class="form-group">
+              <label for="password">Mật khẩu:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                required
+              />
+            </div>
+    
+            <div class="form-group">
+              <label for="fullname">Họ và tên:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fullname"
+                name="fullname"
+                required
+              />
+            </div>
+    
+            <div class="form-group">
+              <label for="dob">Ngày sinh:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dob"
+                name="dob"
+                required
+              />
+            </div>
+    
+            <button type="button" class="btn btn-primary" onclick="validateForm()">
+              Đăng Ký
+            </button>
+          </form>
+    
+          <p id="successMessage" class="mt-3 text-success" style="display: none">
+            Đăng ký thành công!
+          </p>
+          <p id="errorMessage" class="mt-3 text-danger" style="display: none">
+            Vui lòng kiểm tra lại thông tin đăng ký.
+          </p>
+        </div>
+        </div>
+    </div>
+    <script>
+      function validateForm() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const fullname = document.getElementById("fullname").value;
+        const dob = document.getElementById("dob").value;
+
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        const isEmailValid = emailPattern.test(email);
+        const isPasswordValid = password.length >= 8;
+        const isFullnameValid = !/\d/.test(fullname);
+        const isDobValid = /\d{4}-\d{2}-\d{2}/.test(dob);
+
+        if (isEmailValid && isPasswordValid && isFullnameValid && isDobValid) {
+          document.getElementById("successMessage").style.display = "block";
+          document.getElementById("errorMessage").style.display = "none";
+          document.getElementById("registrationForm").style.display = "none";
+        } else {
+          document.getElementById("errorMessage").style.display = "block";
+          document.getElementById("successMessage").style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
